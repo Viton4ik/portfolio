@@ -1,0 +1,123 @@
+
+/*----- main body -----*/
+body {
+    /*margin: 0px;*/
+    /*width: 100%;*/
+    /*min-height: 100%;*/
+    /*overflow-x: hidden;*/
+    /*-webkit-font-smoothing: antialiased;*/
+    background-color: var(--navy);
+    color: var(--slate);
+    /*font-family: var(--font-sans);*/
+    /*font-size: var(--fz-xl);*/
+    /*line-height: 1.3;*/
+
+}
+/*----end main body-----*/
+
+
+/*----- main block -----*/
+main {
+    margin: 0px auto;
+    /*width: 100%;*/
+    max-width: 1600px;
+    min-height: 100vh;
+    padding: 100px 100px;
+}
+
+@media (max-width: 1080px) {
+    main {
+        padding: 30px 30px;
+    }
+}
+
+@media (max-width: 760px) {
+    main {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        padding: 10px 10px;
+    }
+}
+/*----end main block-----*/
+
+
+/*----- delay block -----*/
+.delayed {
+    opacity: 0; /* first state */
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/*----end delay block-----*/
+
+
+/*----- intro block -----*/
+.intro {
+    display: flex;
+    /*-webkit-box-pack: center;*/
+    justify-content: center;
+    /*-webkit-box-align: center;*/
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 0px;
+}
+/*----end intro block-----*/
+
+
+/*----- main block -----*/
+
+/*----end main block-----*/
+
+
+/*----- main block -----*/
+
+/*----end main block-----*/
+
+
+/*----- main block -----*/
+
+/*----end main block-----*/
+
+
+
+
+/*h1, h2, h3, h4, h5, h6 {*/
+/*    margin: 0px 0px 10px;*/
+/*    font-weight: 600;*/
+/*    color: var(--lightest-slate);*/
+/*    line-height: 1.1;*/
+/*}*/
+
+
+
+/*.intro h1 {*/
+/*    margin: 0px 0px 20px 4px;*/
+/*    color: var(--green);*/
+/*    font-family: var(--font-mono);*/
+/*    font-size: clamp(var(--fz-sm),5vw,var(--fz-md));*/
+/*    font-weight: 400;*/
+/*}*/
+
+/*.intro h3 {*/
+/*    margin-top: 5px;*/
+/*    color: var(--slate);*/
+/*    line-height: 0.9;*/
+/*}*/
+
+/*.intro-name{*/
+/* margin: 5px;*/
+/* font-size: clamp(40px, 8vw, 80px);*/
+/*}*/
+/*.intro p {*/
+/*    margin: 20px 0px 0px;*/
+/*    max-width: 540px;*/
+/*}*/
