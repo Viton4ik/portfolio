@@ -13,13 +13,15 @@ window.addEventListener('scroll', function() {
     // delay for scrolling
     if (aboutSectionTop < windowHeight) {
         setTimeout(() => {
-            aboutSection.style.opacity = '1'
-            aboutSection.style.transition = 'opacity 1s ease'
+            // aboutSection.style.opacity = '1'
+            // aboutSection.style.transition = 'opacity 1s ease'
+            aboutSection.style.animation = 'fadeIn 1s ease-in-out 0.6s forwards'
             setTimeout(() => {
-                projectsSection.style.opacity = '1'
-                projectsSection.style.transition = 'opacity 1s ease'
-            }, 600)
-        }, 400)
+                // projectsSection.style.opacity = '1'
+                // projectsSection.style.transition = 'opacity 1s ease'
+                projectsSection.style.animation = 'fadeIn 1s ease-in-out 0.5s forwards'
+            }, 400)
+        }, 200)
 
     }
 
@@ -69,3 +71,12 @@ for (let i = 0; i < coll.length; i++) {
     })
 }
 
+//overlay
+// function on() {
+//     document.getElementById("overlay").style.display = "block";
+// }
+//
+// function off() {
+//     document.getElementById("overlay").style.display = "none";
+// }
+//

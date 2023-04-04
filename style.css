@@ -131,7 +131,7 @@ main {
     /*height: 100vh;*/
     padding: 0px;
     /*margin-bottom: 200px;*/
-    opacity: 1;
+    opacity: 0;
     line-height: 1.3;
 
 }
@@ -205,7 +205,7 @@ main {
 }
 
 .about p {
-    margin: 50px 0px;
+    margin: 20px 0px;
 }
 
 .about-collapsible {
@@ -382,6 +382,7 @@ main {
     background-color: var(--lightest-navy);
     position: relative;
     border-radius: 6px;
+    box-shadow: 8px 8px 8px black;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -416,13 +417,103 @@ main {
         left: 0%;
     }
 }
-/*----end projects block-----*/
+
+.content h2 {
+    font-family: var(--font-alice);
+    font-size: clamp(16px, 5vw, 18px);
+    text-shadow: 5px 5px 5px black;
+}
+
+.content p {
+    /*color: var(--slate);*/
+    font-family: var(--font-alice);
+    font-size: clamp(14px, 5vw, 16px);
+    text-shadow: 5px 5px 5px black;
+}
+
+.content span {
+    color: var(--green);
+}
+
+.content a {
+    color: var(--blue);
+    font-family: var(--font-alice);
+    font-size: clamp(14px, 5vw, 16px);
+    text-shadow: 5px 5px 5px black;
+    text-decoration-line: none;
+    /*position: relative;*/
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.content a:hover {
+    color: var(--green);
+}
+
+.content a:after {
+    content: "";
+    display: block;
+    position: relative;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: var(--blue);
+    transition: width 0.65s ease;
+}
+
+.content a:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: var(--green);
+    transition: width 0.65s ease;
+}
+/*----end a-tag block-----*/
 
 
-/*----- main block -----*/
+/*----- gitHubLink block -----*/
+.github-link {
+    display: flex;
+    align-items: center;
 
-/*----end main block-----*/
+}
 
+.github-link img {
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50%;
 
+}
+
+.github-link img:hover {
+    box-shadow: 2px 2px 2px white;
+    transform: scale(1.1);
+
+}
+/*----gitHubLink block-----*/
+
+/*----end overlay block-----*/
+/*#overlay {*/
+/*    position: fixed; !* Sit on top of the page content *!*/
+/*    display: none; !* Hidden by default *!*/
+/*    width: 100%; !* Full width (cover the whole page) *!*/
+/*    height: 100%; !* Full height (cover the whole page) *!*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    background-color: rgba(0,0,0,0.5); !* Black background with opacity *!*/
+/*    z-index: 2; !* Specify a stack order in case you're using a different order for other elements *!*/
+/*    cursor: pointer; !* Add a pointer on hover *!*/
+/*}*/
+
+/*#pic{*/
+
+/*}*/
+/*----end overlay block-----*/
 
 
