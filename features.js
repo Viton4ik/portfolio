@@ -4,7 +4,7 @@ const introSection = document.querySelector('#intro')
 const aboutSection = document.querySelector('#about')
 const projectsSection = document.querySelector('#projects')
 
-
+// scroll handle
 window.addEventListener('scroll', function() {
     const aboutSectionTop = aboutSection.getBoundingClientRect().top
     // const projectsSectionTop = projectsSection.getBoundingClientRect().top
@@ -55,7 +55,6 @@ window.addEventListener('scroll', function() {
 })
 
 
-
 // collapsible list
 let coll = document.getElementsByClassName("about-collapsible")
 
@@ -71,12 +70,71 @@ for (let i = 0; i < coll.length; i++) {
     })
 }
 
-//overlay
-// function on() {
-//     document.getElementById("overlay").style.display = "block";
+
+// overlay
+function on() {
+    document.getElementById("overlay").style.display = "block"
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none"
+}
+
+// //slider bar
+// let slideIndex = 1
+// showSlides(slideIndex)
+//
+// // Next/previous controls
+// function plusSlides(n) {
+//     showSlides(slideIndex += n)
 // }
 //
-// function off() {
-//     document.getElementById("overlay").style.display = "none";
+// // Thumbnail image controls
+// function currentSlide(n) {
+//     showSlides(slideIndex = n)
 // }
 //
+// function showSlides(n) {
+//     let i;
+//     let slides = document.getElementsByClassName(`mySlides`)
+//     let dots = document.getElementsByClassName("dot")
+//     if (n > slides.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slides.length}
+//     for (i = 0; i < slides.length; i++) {
+//         slides[i].style.display = "none"
+//     }
+//     for (i = 0; i < dots.length; i++) {
+//         dots[i].className = dots[i].className.replace(" active", "")
+//     }
+//     slides[slideIndex-1].style.display = "block"
+//     dots[slideIndex-1].className += " active"
+// }
+//
+let slideIndex = 1
+showSlides(slideIndex, 1) // Показать первый блок со слайдами
+
+// Next/previous controls
+function plusSlides(n, num) {
+    showSlides(slideIndex += n, num)
+}
+
+// Thumbnail image controls
+function currentSlide(n, num) {
+    showSlides(slideIndex = n, num)
+}
+
+function showSlides(n, num) {
+    let i;
+    let slides = document.querySelectorAll(`.mySlides[data-num="${num}"]`)
+    let dots = document.querySelectorAll(".dot")
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "")
+    }
+    slides[slideIndex-1].style.display = "block"
+    dots[slideIndex-1].className += " active"
+}
