@@ -435,7 +435,7 @@ main {
     color: var(--green);
 }
 
-.content a {
+.contact-link, .content a {
     color: var(--blue);
     font-family: var(--font-alice);
     font-size: clamp(14px, 5vw, 16px);
@@ -446,11 +446,11 @@ main {
     margin-left: 10px;
 }
 
-.content a:hover {
+.contact-link:hover, .content a:hover {
     color: var(--green);
 }
 
-.content a:after {
+.contact-link:after, .content a:after {
     content: "";
     display: block;
     position: relative;
@@ -462,7 +462,7 @@ main {
     transition: width 0.65s ease;
 }
 
-.content a:hover:after {
+.contact-link:hover:after, .content a:hover:after {
     content: "";
     width: 100%;
     display: block;
@@ -486,6 +486,8 @@ main {
 .github-link img {
     box-shadow: 5px 5px 5px black;
     border-radius: 50%;
+    width: 30px;
+    height: 30px;
 }
 
 .github-link img:hover {
@@ -496,7 +498,7 @@ main {
 /*----gitHubLink block-----*/
 
 /*----end overlay block-----*/
-#overlay {
+#overlay1, #overlay2, #overlay3, #overlay4 {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -510,7 +512,7 @@ main {
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#pic {
+#pic1, #pic2, #pic3, #pic4 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -525,13 +527,13 @@ main {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 1000px;
+    max-width: 1200px;
     position: relative;
     margin: auto;
 }
 
 /* Hide the images by default */
-.mySlides {
+.mySlides1, .mySlides2 {
     display: none;
 }
 
@@ -621,13 +623,29 @@ main {
     font-size: 50px;
     font-weight: bold;
 }
+.close img {
+    box-shadow: 5px 5px 5px black;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
 
+    /*box-shadow: 2px 2px 2px white;*/
+    /*transform: scale(1.1);*/
+    /*background-color: white;*/
+
+}
+.close img:hover {
+    box-shadow: 2px 2px 2px white;
+    transform: scale(1.1);
+    background-color: white;
+
+}
 .close:hover,
 .close:focus {
     color: var(--pink);
     text-decoration: none;
     cursor: pointer;
-    animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+    animation: 1.1s ease-in-out 0s normal none infinite running trambling-animation;
     text-shadow: 15px 15px 15px black;
 }
 
@@ -668,3 +686,17 @@ main {
 }
 /*----end slidebar block-----*/
 
+
+/*----- prj-description block ------*/
+.prj-description ul {
+    display:inline;
+    margin-top: 0;
+    padding: 0;
+}
+.prj-description ul li {
+    padding: 0;
+    margin-top: 0;
+    font-size: clamp(14px, 5vw, 16px);
+    font-family: var(--font-alice);
+}
+/*----end prj-description block-----*/

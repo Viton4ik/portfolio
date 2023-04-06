@@ -71,62 +71,53 @@ for (let i = 0; i < coll.length; i++) {
 }
 
 
+// // overlay
+// function on() {
+//     document.getElementById("overlay").style.display = "block"
+//     // document.querySelector(".overlay").style.display = "block"
+// }
+//
+// function off() {
+//     document.getElementById("overlay").style.display = "none"
+//     // document.querySelector(".overlay").style.display = "none"
+// }
+
+// var mySlidesNumber = 'mySlides1'
+// var dotNumber = 'dot1'
 // overlay
-function on() {
-    document.getElementById("overlay").style.display = "block"
+function on(blockName, mySlidesNum) {
+    // get set of the slides for the specific block
+    let mySlidesNumber = mySlidesNum
+    let slideIndex = 1
+    showSlides(slideIndex, mySlidesNumber)
+    //show the block
+    document.getElementById(blockName).style.display = "block"
 }
 
-function off() {
-    document.getElementById("overlay").style.display = "none"
+function off(blockName) {
+    document.getElementById(blockName).style.display = "none"
 }
 
-// //slider bar
-// let slideIndex = 1
-// showSlides(slideIndex)
-//
-// // Next/previous controls
-// function plusSlides(n) {
-//     showSlides(slideIndex += n)
-// }
-//
-// // Thumbnail image controls
-// function currentSlide(n) {
-//     showSlides(slideIndex = n)
-// }
-//
-// function showSlides(n) {
-//     let i;
-//     let slides = document.getElementsByClassName(`mySlides`)
-//     let dots = document.getElementsByClassName("dot")
-//     if (n > slides.length) {slideIndex = 1}
-//     if (n < 1) {slideIndex = slides.length}
-//     for (i = 0; i < slides.length; i++) {
-//         slides[i].style.display = "none"
-//     }
-//     for (i = 0; i < dots.length; i++) {
-//         dots[i].className = dots[i].className.replace(" active", "")
-//     }
-//     slides[slideIndex-1].style.display = "block"
-//     dots[slideIndex-1].className += " active"
-// }
-//
+
+//slider bar
+let mySlidesNumber = 'mySlides1'
 let slideIndex = 1
-showSlides(slideIndex, 1) // Показать первый блок со слайдами
+showSlides(slideIndex, mySlidesNumber)
 
 // Next/previous controls
-function plusSlides(n, num) {
-    showSlides(slideIndex += n, num)
+function plusSlides(n, mySlidesNumber) {
+    showSlides(slideIndex += n, mySlidesNumber)
 }
 
 // Thumbnail image controls
-function currentSlide(n, num) {
-    showSlides(slideIndex = n, num)
+function currentSlide(n, mySlidesNumber, dotNumber) {
+    showSlides(slideIndex = n, mySlidesNumber, dotNumber)
 }
 
-function showSlides(n, num) {
+function showSlides(n, mySlidesNumber) {
     let i;
-    let slides = document.querySelectorAll(`.mySlides[data-num="${num}"]`)
-    let dots = document.querySelectorAll(".dot")
+    let slides = document.getElementsByClassName(`${mySlidesNumber}`)
+    let dots = document.getElementsByClassName(`dot`)
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
     for (i = 0; i < slides.length; i++) {
@@ -138,3 +129,5 @@ function showSlides(n, num) {
     slides[slideIndex-1].style.display = "block"
     dots[slideIndex-1].className += " active"
 }
+
+
