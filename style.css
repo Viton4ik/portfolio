@@ -57,6 +57,10 @@ main {
     main {
         padding: 100px 50px;
     }
+    footer {
+        opacity: 0;
+        z-index: -1;
+    }
 }
 
 @media (max-width: 760px) {
@@ -68,6 +72,12 @@ main {
 @media (max-width: 400px) {
     main {
         padding: 10px 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    #mySidenav a {
+        opacity: 0;
     }
 }
 /*----end main block-----*/
@@ -736,6 +746,8 @@ main {
 
 
 footer {
+    position: relative;
+    z-index: 0;
 }
 
 .right-footer {
@@ -833,7 +845,6 @@ footer {
     top: 20px;
     background-color: var(--dark-slate);
     right: 340px;
-
 }
 
 #aboutBar {
@@ -904,7 +915,7 @@ footer {
 }
 /*----end svg-img block-----*/
 
- /*Turn off features for all tablets and phones. Increase/decrease the pixels if needed */
+/*Turn off features for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1080px) {
     footer {
         opacity: 0;
