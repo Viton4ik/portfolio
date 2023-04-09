@@ -103,17 +103,3 @@ function showSlides(n, mySlidesNumber, myDotsNumber) {
     dots[slideIndex-1].className += " active"
 }
 
-
-// Counter with using local storage
-let count = localStorage.getItem('visitCount');
-
-// Check if we have something in local storage
-if (count === null) {
-    count = 1;
-    localStorage.setItem('visitCount', count);
-} else {
-    count = parseInt(count) + 1;
-    localStorage.setItem('visitCount', count);
-}
-
-console.log(`Site has been visited ${count} times`);
