@@ -18,20 +18,9 @@ window.addEventListener('scroll', function() {
             // aboutSection.style.opacity = '1'
             // aboutSection.style.transition = 'opacity 1s ease'
             aboutSection.style.animation = 'fadeIn 1s ease-in-out 0.6s forwards'
-            // setTimeout(() => {
-            //     // projectsSection.style.opacity = '1'
-            //     // projectsSection.style.transition = 'opacity 1s ease'
-            //     projectsSection.style.animation = 'fadeIn 1s ease-in-out 0.5s forwards'
-            // }, 150)
         }, 100)
 
     }
-
-    // if (introSectionTop < windowHeight) {
-    //     setTimeout(() => {
-    //         introSection.style.animation = 'fadeIn 1s ease-in-out 0.6s forwards'
-    //     }, 50)
-
 
     if (projectsSectionTop < windowHeight) {
         setTimeout(() => {
@@ -48,7 +37,6 @@ window.addEventListener('scroll', function() {
     }
 
 })
-
 
 // collapsible list
 let coll = document.getElementsByClassName("about-collapsible")

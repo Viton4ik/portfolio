@@ -15,7 +15,6 @@
 
 /*----end fonts body-----*/
 
-
 :root {
     --dark-navy: #020c1b;
     --navy: #0a192f;
@@ -40,16 +39,8 @@
 
 /*----- main body -----*/
 body {
-    /*margin: 0px;*/
-    /*width: 100%;*/
-    /*min-height: 100%;*/
-    /*overflow-x: hidden;*/
-    /*-webkit-font-smoothing: antialiased;*/
     background-color: var(--navy);
     color: var(--slate);
-    /*font-family: var(--font-sans);*/
-    /*font-size: var(--fz-xl);*/
-    /*line-height: 1.3;*/
 }
 /*----end main body-----*/
 
@@ -57,19 +48,10 @@ body {
 /*----- main block -----*/
 main {
     margin: 0px auto;
-    /*width: 100%;*/
     max-width: 1600px;
     min-height: 100vh;
     padding: 100px 200px 20px 200px;
 }
-
-/*section {*/
-/*    margin: 0px auto;*/
-/*    !*width: 100%;*!*/
-/*    max-width: 1600px;*/
-/*    min-height: 100vh;*/
-/*    padding: 100px 200px 20px 200px;*/
-/*}*/
 
 @media (max-width: 1080px) {
     main {
@@ -88,25 +70,6 @@ main {
         padding: 10px 10px;
     }
 }
-/*@media (max-width: 600px) {*/
-/*    main {*/
-/*        max-width: 600px;*/
-/*        padding: 50px 50px;*/
-/*    }*/
-/*}*/
-
-/*@media (max-height: 500px) {*/
-/*    main {*/
-/*        padding: 10px 10px;*/
-/*    }*/
-/*}*/
-
-/*@media (max-height: 300px) {*/
-/*    main {*/
-/*        padding: 100px 10px;*/
-/*        !*height: 150vh;*!*/
-/*    }*/
-/*}*/
 /*----end main block-----*/
 
 
