@@ -3,21 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
-
 
     <title>Vict0r's page</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <header>
+    <div id="mySidenav" class="sidenav delayed">
+        <a href="#intro" id="introBar">Intro</a>
+        <a href="#about" id="aboutBar">About</a>
+        <a href="#projects" id="projectsBar">Projects</a>
+        <a href="#contact" id="contactBar">Contact</a>
+    </div>
 </header>
+
+<!--<section class="parallax">-->
+<!--    <div class="caption">-->
+<!--        <span class="border">SCROLL DOWN TO START</span>-->
+<!--    </div>-->
+<!--</section>-->
 
 <main>
     <section class="intro delayed" id="intro">
+<!--        if paralax-->
+<!--        <section class="intro" id="intro">-->
         <div>
             <h1>Hello, I am </h1>
         </div>
@@ -49,7 +60,12 @@
             </h3>
         </div>
     </section>
+</main>
 
+<!--<section class="parallax">-->
+<!--</section>-->
+
+<main>
     <section id="about" class="about intro-intro">
         <div>
             <h1><em>About me</em></h1>
@@ -61,10 +77,10 @@
                 Learning Python, Django, JavaScript, and CSS, I am trying to convert myself into a real full-stack developer.
                 To be honest, everybody knows that there is no limit to perfection, and I'm doing my best and looking forward to achieving this goal.
                 So, the goals have been set, waiting for the result!
-                <p>
-                    P.S. If you like to collaborate, please feel free to<a class="contact-link" href=# title="contact">invite me.</a>
-                    I'm always ready to cooperate!
-                </p>
+            <p>
+                P.S. If you like to collaborate, please feel free to<a class="contact-link" href="#contact" title="contact">invite me.</a>
+                I'm always ready to cooperate!
+            </p>
             </p>
         </div>
         <div>
@@ -86,7 +102,6 @@
             </p>
         </div>
     </section>
-
     <section id="projects" class="projects">
         <div>
             <button class="projects-collapsible about-collapsible">My projects</button>
@@ -109,17 +124,9 @@
                                 <span><em>Frontend:</em></span> HTML, CSS, JavaScript
                             </p>
 
-<!--                            <button class="link" onclick="on()">-->
-<!--                                <button class="btn link">-->
-                                    <button class="link" onclick="on('overlay1', 'mySlides1')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-folder-symlink-fill" viewBox="0 0 16 16">
-                                    <path d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3zM2.19 3c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3H2.19zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z"/>
-                                </svg>
-                                <span>Show me</span>
-                            </button>
+                            <img class="link" src="https://img.shields.io/static/v1?label=&#10149;&message=Show me&color=354f80" onclick="on('overlay1', 'mySlides1','dot1')"/>
+
                             <div id="overlay1">
-<!--                                <div id="1" class="overlay" style="display: none">-->
-<!--                                <div id="overlay" onclick="off_()">-->
                                 <div id="pic1">
                                     <!-- Slideshow container -->
                                     <div class="slideshow-container">
@@ -146,23 +153,22 @@
                                         </div>
 
                                         <!-- Next and previous buttons -->
-                                        <a class="prev" onclick="plusSlides(-1, 'mySlides1')">&#10094;</a>
-                                        <a class="next" onclick="plusSlides(1, 'mySlides1')">&#10095;</a>
+                                        <a class="prev" onclick="plusSlides(-1, 'mySlides1','dot1')">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1, 'mySlides1','dot1')">&#10095;</a>
                                     </div>
                                     <br>
 
                                     <!-- The dots/circles -->
                                     <div style="text-align:center">
-                                        <span class="dot" onclick="currentSlide(1, 'mySlides1')"></span>
-                                        <span class="dot" onclick="currentSlide(2, 'mySlides1')"></span>
-                                        <span class="dot" onclick="currentSlide(3, 'mySlides1')"></span>
+                                        <span class="dot1" onclick="currentSlide(1, 'mySlides1','dot1')"></span>
+                                        <span class="dot1" onclick="currentSlide(2, 'mySlides1','dot1')"></span>
+                                        <span class="dot1" onclick="currentSlide(3, 'mySlides1','dot1')"></span>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="container right">
                         <div class="content">
                             <h2><em>Feb 2023</em></h2>
@@ -190,14 +196,9 @@
                                 <span><em>Frontend:</em></span> HTML, CSS
                             </p>
 
-                            <button class="link" onclick="on('overlay2', 'mySlides2')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-folder-symlink-fill" viewBox="0 0 16 16">
-                                    <path d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3zM2.19 3c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3H2.19zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z"/>
-                                </svg>
-                                <span>Show me</span>
-                            </button>
+                            <img class="link" src="https://img.shields.io/static/v1?label=&#10149;&message=Show me&color=354f80" onclick="on('overlay2', 'mySlides2','dot2')"/>
+
                             <div id="overlay2">
-<!--                                <div id="2" class="overlay" style="display: none">-->
                                 <div id="pic2">
                                     <!-- Slideshow container -->
                                     <div class="slideshow-container">
@@ -240,19 +241,19 @@
                                         </div>
 
                                         <!-- Next and previous buttons -->
-                                        <a class="prev" onclick="plusSlides(-1 ,'mySlides2')">&#10094;</a>
-                                        <a class="next" onclick="plusSlides(1, 'mySlides2')">&#10095;</a>
+                                        <a class="prev" onclick="plusSlides(-1 ,'mySlides2','dot2')">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1, 'mySlides2','dot2')">&#10095;</a>
                                     </div>
                                     <br>
 
                                     <!-- The dots/circles -->
                                     <div style="text-align:center">
-                                        <span class="dot" onclick="currentSlide(1, 'mySlides2')"></span>
-                                        <span class="dot" onclick="currentSlide(2, 'mySlides2')"></span>
-                                        <span class="dot" onclick="currentSlide(3, 'mySlides2')"></span>
-                                        <span class="dot" onclick="currentSlide(4, 'mySlides2')"></span>
-                                        <span class="dot" onclick="currentSlide(5, 'mySlides2')"></span>
-                                        <span class="dot" onclick="currentSlide(6, 'mySlides2')"></span>
+                                        <span class="dot2" onclick="currentSlide(1, 'mySlides2','dot2')"></span>
+                                        <span class="dot2" onclick="currentSlide(2, 'mySlides2','dot2')"></span>
+                                        <span class="dot2" onclick="currentSlide(3, 'mySlides2','dot2')"></span>
+                                        <span class="dot2" onclick="currentSlide(4, 'mySlides2','dot2')"></span>
+                                        <span class="dot2" onclick="currentSlide(5, 'mySlides2','dot2')"></span>
+                                        <span class="dot2" onclick="currentSlide(6, 'mySlides2','dot2')"></span>
                                     </div>
 
                                 </div>
@@ -283,14 +284,10 @@
                                 <span><em>Application:</em></span> Telegram
                             </p>
 
-                            <button class="link" onclick="on('overlay3', 'mySlides3')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-folder-symlink-fill" viewBox="0 0 16 16">
-                                    <path d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3zM2.19 3c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3H2.19zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z"/>
-                                </svg>
-                                <span>Show me</span>
-                            </button>
+                            <img class="link" src="https://img.shields.io/static/v1?label=&#10149;&message=Show me&color=354f80" onclick="on('overlay3', 'mySlides3','dot3')"/>
+
                             <div id="overlay3">
-                                <!--                                <div id="2" class="overlay" style="display: none">-->
+
                                 <div id="pic3">
                                     <!-- Slideshow container -->
                                     <div class="slideshow-container">
@@ -317,16 +314,16 @@
                                         </div>
 
                                         <!-- Next and previous buttons -->
-                                        <a class="prev" onclick="plusSlides(-1 ,'mySlides3')">&#10094;</a>
-                                        <a class="next" onclick="plusSlides(1, 'mySlides3')">&#10095;</a>
+                                        <a class="prev" onclick="plusSlides(-1 ,'mySlides3','dot3')">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1, 'mySlides3','dot3')">&#10095;</a>
                                     </div>
                                     <br>
 
                                     <!-- The dots/circles -->
                                     <div style="text-align:center">
-                                        <span class="dot" onclick="currentSlide(1, 'mySlides3')"></span>
-                                        <span class="dot" onclick="currentSlide(2, 'mySlides3')"></span>
-                                        <span class="dot" onclick="currentSlide(3, 'mySlides3')"></span>
+                                        <span class="dot3" onclick="currentSlide(1, 'mySlides3','dot3')"></span>
+                                        <span class="dot3" onclick="currentSlide(2, 'mySlides3','dot3')"></span>
+                                        <span class="dot3" onclick="currentSlide(3, 'mySlides3','dot3')"></span>
                                     </div>
                                 </div>
                             </div>
@@ -342,17 +339,18 @@
                                 </a>
                             </div>
                             <p>Photo Slider Application with using JS</p>
-                            <div class="github-link">
-                                <img class="link" src="https://img.shields.io/static/v1?label=Link&message=:&color=grey"/>
-                                <a href="https://viton4ik.github.io/photoSlider/" title="Photo Slider Application" target="_blank">
-                                Try me
-                            </a>
-                            </div>
+
                             <p>
                                 <span><em>Backend:</em></span> N/A<br>
                                 <span><em>Frontend:</em></span> JavaScript, CSS, HTML
                             </p>
-                            <img class="link" src="https://img.shields.io/static/v1?label=Enjoy&message=JS&color=yellow"/>
+
+                            <div class="button-link" >
+                                <a href="https://viton4ik.github.io/photoSlider/" title="Photo Slider Application" target="_blank">
+                                    <img class="link" src="https://img.shields.io/static/v1?label=&#10149;&message=Try me&color=354f80"/>
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                     <div class="container left">
@@ -360,7 +358,7 @@
                             <h2><em>Jan 2023</em></h2>
                             <div class="github-link">
                                 <img src="img/github.png" alt="github link">
-                                <a href="https://github.com/Viton4ik/BirthdaysReminder" title="Birthdays Reminder" target="_blank">
+                                <a href="https://github.com/Viton4ik/easyScrap" title="easyScrap" target="_blank">
                                     Easy web-scraping app
                                 </a>
                             </div>
@@ -372,18 +370,22 @@
                             <p><span><em>Usage:</em></span></p>
                             <div class="prj-description">
                                 <ul>
-                                    <li>This simple script can get info about the topic name from https://reddit.com/r/.</li>
+                                    <li>This simple script can get info about the topic name from https://reddit.com/r/</li>
                                 </ul>
                             </div>
                             <p>
-                                <span><em>Backend:</em></span> N/A<br>
-                                <span><em>Frontend:</em></span> JavaScript
+                                <span><em>Language:</em></span> JavaScript
                             </p>
 
-                            <img class="link" src="https://img.shields.io/static/v1?label=Enjoy&message=JS&color=yellow"/>
-                        </div>
-                    </div>
+                            <div class="button-link" >
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="JavaScript" target="_blank">
+                                    <img class="link" src="https://img.shields.io/static/v1?label=Enjoy&message=JS&color=yellow"/>
+                                </a>
+                            </div>
 
+                        </div>
+
+                    </div>
                     <div class="container right">
                         <div class="content">
                             <h2><em>Dec 2022</em></h2>
@@ -410,12 +412,8 @@
                                 <span><em>Frontend:</em></span> HTML, CSS
                             </p>
 
-                            <button class="link" onclick="on('overlay4', 'mySlides4')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-folder-symlink-fill" viewBox="0 0 16 16">
-                                    <path d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3zM2.19 3c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3H2.19zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z"/>
-                                </svg>
-                                <span>Show me</span>
-                            </button>
+                            <img class="link" src="https://img.shields.io/static/v1?label=&#10149;&message=Show me&color=354f80" onclick="on('overlay4', 'mySlides4','dot4')"/>
+
                             <div id="overlay4">
                                 <div id="pic4">
                                     <!-- Slideshow container -->
@@ -449,41 +447,297 @@
                                         </div>
 
                                         <!-- Next and previous buttons -->
-                                        <a class="prev" onclick="plusSlides(-1 ,'mySlides4')">&#10094;</a>
-                                        <a class="next" onclick="plusSlides(1, 'mySlides4')">&#10095;</a>
+                                        <a class="prev" onclick="plusSlides(-1 ,'mySlides4','dot4')">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1, 'mySlides4','dot4')">&#10095;</a>
                                     </div>
                                     <br>
 
                                     <!-- The dots/circles -->
                                     <div style="text-align:center">
-                                        <span class="dot" onclick="currentSlide(1, 'mySlides4')"></span>
-                                        <span class="dot" onclick="currentSlide(2, 'mySlides4')"></span>
-                                        <span class="dot" onclick="currentSlide(3, 'mySlides4')"></span>
-                                        <span class="dot" onclick="currentSlide(4, 'mySlides4')"></span>
+                                        <span class="dot4" onclick="currentSlide(1, 'mySlides4','dot4')"></span>
+                                        <span class="dot4" onclick="currentSlide(2, 'mySlides4','dot4')"></span>
+                                        <span class="dot4" onclick="currentSlide(3, 'mySlides4','dot4')"></span>
+                                        <span class="dot4" onclick="currentSlide(4, 'mySlides4','dot4')"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2><em>Dec 2022</em></h2>
+                            <div class="github-link">
+                                <img src="img/github.png" alt="github link">
+                                <a href="https://github.com/Viton4ik/Vacantion-builder-script" title="Vacantion builder" target="_blank">
+                                    Vacantion builder script
+                                </a>
+                            </div>
+                            <p>The script creates a detailed vacation plan (xlsx-file) for each employee using a separate file with appropriate data.
+                                Holidays are taken into account
+                            </p>
+                            <span><em>Language:</em></span> Python
+                            </p>
+
+                            <img class="link" src="https://img.shields.io/static/v1?label=&#10149;&message=Show me&color=354f80" onclick="on('overlay5', 'mySlides5','dot5')"/>
+
+                            <div id="overlay5">
+                                <div id="pic5">
+                                    <!-- Slideshow container -->
+                                    <div class="slideshow-container">
+                                        <span class="close" onclick="off('overlay5')">
+                                        <img src="img/close.png" alt="close button">
+                                        </span>
+                                        <!-- Full-width images with number and caption text -->
+                                        <div class="mySlides5 fade">
+                                            <div class="numbertext">1 / 1</div>
+                                            <img src="https://github.com/Viton4ik/Vacantion-builder-script/blob/master/example.jpg?raw=true" alt="Vacantion builder script" width="100%" height="100%">
+                                            <div class="text">"Vacantion builder script"</div>
+                                        </div>
+
+                                        <div class="mySlides5 fade">
+                                            <div class="numbertext">1 / 1</div>
+                                            <img src="https://github.com/Viton4ik/Vacantion-builder-script/blob/master/example.jpg?raw=true" alt="Vacantion builder script" width="100%" height="100%">
+                                            <div class="text">"Vacantion builder script"</div>
+                                        </div>
+                                        <!-- Next and previous buttons -->
+                                        <a class="prev" onclick="plusSlides(-1 ,'mySlides5','dot5')">&#10094;</a>
+                                        <a class="next" onclick="plusSlides(1, 'mySlides5','dot5')">&#10095;</a>
+                                    </div>
+                                    <br>
+
+                                    <!-- The dots/circles -->
+                                    <div style="text-align:center">
+                                        <span class="dot5" onclick="currentSlide(1, 'mySlides5','dot5')"></span>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2><em>Oct 2022</em></h2>
+                            <div class="github-link">
+                                <img src="img/github.png" alt="github link">
+                                <a href="https://github.com/Viton4ik/TeleBot_exchanger" title="TeleBot_exchanger" target="_blank">
+                                    @SympleExchangerBot
+                                </a>
+                            </div>
+                            <p>A telegram bot for currency+crypto exchange</p>
+                            <p><span><em>Usage:</em></span></p>
+                            <div class="prj-description">
+                                <ul>
+                                    <li>"currency ticker" "converted currency ticker" "amount"</li>
+                                    <li>Example: USD EUR 1</li>
+                                    <li>Start: /start</li>
+                                    <li>Help: /help</li>
+                                    <li>Bonus: /set</li>
+                                    <li>Currencies list (base): /currency</li>
+                                    <li>Crypto list (base): /crypto</li>
+                                    <li>Download full currencies list: /fullCurrecncy</li>
+                                    <li>Download full crypto currencies list: /fullCrypto</li>
+                                    <li>Change the language (Russian): /rus</li>
+                                </ul>
+                            </div>
+                            <p>
+                                <span><em>Backend:</em></span> Python<br>
+                                <span><em>Application:</em></span> Telegram
+                            </p>
 
+                            <div class="button-link" >
+                                <a href="https://t.me/SympleExchangerBot" title="@SympleExchangerBot" target="_blank">
+                                    <img class="link" src="https://img.shields.io/static/v1?label=&#10149;&message=@SympleExchangerBot&color=0078bb"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2><em>Sep 2022</em></h2>
+                            <div class="github-link">
+                                <img src="img/github.png" alt="github link">
+                                <a href="https://github.com/Viton4ik/tinyGamesPython" title="tinyGamesPython" target="_blank">
+                                    Tiny console games with using Python
+                                </a>
+                            </div>
+                            <p>My first repository on GitHub</p>
+                            <p><span><em>Usage:</em></span></p>
+                            <div class="prj-description">
+                                <ul>
+                                    <li>Tic-tac-toe console game</li>
+                                    <li>The Sea Battle console game</li>
+                                </ul>
+                            </div>
+                            <p>
+                                <span><em>Backend:</em></span> Python<br>
+                            </p>
+
+                            <div class="button-link" >
+                                <a href="https://www.python.org/" title="Python" target="_blank">
+                                    <img class="link" src="https://img.shields.io/static/v1?label=Enjoy&message=Python&color=blue"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2><em>Sep 2022</em></h2>
+                            <div class="github-link">
+                                <img src="img/github.png" alt="github link">
+                                <a href="https://github.com/Viton4ik/Copy_Paste" title="Copy_Paste" target="_blank">
+                                    Copy/Paste cache script
+                                </a>
+                            </div>
+                            <p>My first code</p>
+                            <p><span><em>Usage:</em></span></p>
+                            <div class="prj-description">
+                                <ul>
+                                    <li>Script imports all "Crtl-C" data to the file "copy_paste_buffer.txt" in the same directory (v1)</li>
+                                    <li>Script downloads "Ctrl-C" data to a file "copy_paste_buffer.txt" in a directory we needed (v2)</li>
+                                </ul>
+                            </div>
+                            <p>
+                                <span><em>Backend:</em></span> Python<br>
+                            </p>
+
+                            <div class="button-link" >
+                                <a href="https://www.python.org/" title="Python" target="_blank">
+                                    <img class="link" src="https://img.shields.io/static/v1?label=Enjoy&message=Python&color=blue"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+</main>
 
+<main id="contact">
+    <section class="contact intro-intro delayed">
+        <div>
+            <h1><em>Contacts</em></h1>
+        </div>
+        <div>
+            <p style="margin: 30px 0px;">
+                Here my contacts can be found:
+            </p>
+        </div>
+        <div>
+            <button class="about-collapsible">E-mail</button>
+            <div class="about-collapsible-content">
+                <ul class="contact-info">
+                    <li >
+                        <a href="mailto:viton4ik@gmail.com" title="viton4ik@gmail.com" target="_blank">
+                            viton4ik@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin: 30px 0px;">
+            <button class="about-collapsible">Telegram</button>
+            <div class="about-collapsible-content">
+                <ul class="contact-info">
+                    <li >
+                        <a href="https://t.me/Viton4ik" title="https://t.me/Viton4ik" target="_blank">
+                            @Victor
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin: 30px 0px 200px 0px;">
+            <button class="about-collapsible">
+
+                GitHub</button>
+
+            <div class="about-collapsible-content">
+
+                <ul class="contact-info">
+
+                    <li >
+                        <a href="https://github.com/Viton4ik" title="https://github.com/Viton4ik" target="_blank">
+                            Viton4ik
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <div>
-
+            <p class="svg-text">
+                Designed and created by Victor
+            </p>
         </div>
-    </section>
 
-    <section id="contact">
+        <div class="svg-img">
+            <span>
+                <a href="https://github.com/Viton4ik" title="https://github.com/Viton4ik" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" height="31px" width="31px" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+                    <title>GitHub</title>
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                </svg>
+                </a>
+                &nbsp;
+            </span>
 
+            <span>
+                <a href="https://t.me/Viton4ik" title="https://t.me/Viton4ik" target="_blank">
+                <svg fill="#57CBFFFF" width="35px" height="35px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg">
+                    <title>telegram</title>
+                    <path d="M22.26465,2.42773a2.04837,2.04837,0,0,0-2.07813-.32421L2.26562,9.33887a2.043,2.043,0,0,0,.1045,3.81836l3.625,1.26074,2.0205,6.68164A.998.998,0,0,0,8.134,21.352c.00775.012.01868.02093.02692.03259a.98844.98844,0,0,0,.21143.21576c.02307.01758.04516.03406.06982.04968a.98592.98592,0,0,0,.31073.13611l.01184.001.00671.00287a1.02183,1.02183,0,0,0,.20215.02051c.00653,0,.01233-.00312.0188-.00324a.99255.99255,0,0,0,.30109-.05231c.02258-.00769.04193-.02056.06384-.02984a.9931.9931,0,0,0,.20429-.11456,250.75993,250.75993,0,0,1,.15222-.12818L12.416,18.499l4.03027,3.12207a2.02322,2.02322,0,0,0,1.24121.42676A2.05413,2.05413,0,0,0,19.69531,20.415L22.958,4.39844A2.02966,2.02966,0,0,0,22.26465,2.42773ZM9.37012,14.73633a.99357.99357,0,0,0-.27246.50586l-.30951,1.504-.78406-2.59307,4.06525-2.11695ZM17.67188,20.04l-4.7627-3.68945a1.00134,1.00134,0,0,0-1.35352.11914l-.86541.9552.30584-1.48645,7.083-7.083a.99975.99975,0,0,0-1.16894-1.59375L6.74487,12.55432,3.02051,11.19141,20.999,3.999Z">
+                    </path>
+                </svg>
+                </a>
+                &nbsp;
+            </span>
+
+            <span>
+                <a href="mailto:viton4ik@gmail.com" title="viton4ik@gmail.com" target="_blank">
+                <svg width="35px" height="35px" fill="#57CBFFFF" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <style type="text/css"> .st0{fill:none;} </style>
+                        <path d="M21,11c0,6.7-4.3,6.4-4.8,6.4c-0.6,0-1.1-0.1-1.6-0.4c-0.4-0.3-0.8-0.6-1-1.1c-0.4,0.5-0.8,0.9-1.3,1.1 c-0.5,0.3-1,0.4-1.6,0.4c-0.5,0-1-0.1-1.4-0.3c-0.4-0.2-0.8-0.6-1-1c-0.3-0.4-0.5-0.9-0.6-1.5c-0.1-0.6-0.1-1.3-0.1-2 c0.1-0.9,0.3-1.7,0.6-2.5c0.3-0.7,0.7-1.4,1.1-1.9c0.4-0.5,0.9-0.9,1.5-1.2c0.6-0.3,1.2-0.4,1.8-0.4c2,0,3.1,1,3.3,1.2L15.4,14 c0,0.4-0.2,1.8,1.1,1.8c0.4,0,2.4-0.5,2.4-4.7c0-0.1,0.9-7-6.6-7C6.3,4,5,9.9,5,12c0,8.4,5.3,8,7,8c2,0,3.1-0.4,3.3-0.5l0.4,1.8 C15.5,21.5,14.5,22,12,22c-3.1,0-9-0.1-9-10c0-1.4,0.8-10,9.5-10C20.8,2,21,9.6,21,11z M10.1,12.6c-0.1,0.9,0,1.7,0.2,2.2 c0.2,0.5,0.6,0.7,1.2,0.7c1.1,0,1.7-1.4,1.8-1.8l0.5-5.1c-0.1,0-0.7-0.1-0.9-0.1c-0.8,0-1.5,0.4-1.9,1.1 C10.5,10.2,10.2,11.2,10.1,12.6z">
+                        </path>
+                        <rect class="st0" width="24" height="24">
+                        </rect>
+                    </g>
+                </svg>
+                </a>
+                &nbsp;
+            </span>
+        </div>
     </section>
 </main>
 
 <footer>
+    <div class="right-footer delayed">
+        <p class="text-right">
+
+            <a href="https://t.me/Viton4ik" title="@Victor" target="_blank">
+                Designed by Victor
+            </a>
+            , &copy; 2023
+        </p>
+    </div>
+
+    <div class="left-footer delayed">
+        <p class="text-left">
+            <a href="mailto:viton4ik@gmail.com" title="viton4ik@gmail.com" target="_blank">
+                viton4ik@gmail.com
+            </a>
+            , &copy; 2023
+        </p>
+
+    </div>
+
 </footer>
 
 <script src="features.js"></script>

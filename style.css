@@ -20,7 +20,7 @@
     --dark-navy: #020c1b;
     --navy: #0a192f;
     --light-navy: #112240;
-    --lightest-navy: #233554;
+    --lightest-navy: #123059;
     --navy-shadow: rgba(2, 12, 27, 0.7);
     --dark-slate: #495670;
     --slate: #8892b0;
@@ -50,7 +50,6 @@ body {
     /*font-family: var(--font-sans);*/
     /*font-size: var(--fz-xl);*/
     /*line-height: 1.3;*/
-
 }
 /*----end main body-----*/
 
@@ -61,10 +60,16 @@ main {
     /*width: 100%;*/
     max-width: 1600px;
     min-height: 100vh;
-    padding: 200px 200px 200px 200px;
-
-    /*height: 100%;*/
+    padding: 100px 200px 20px 200px;
 }
+
+/*section {*/
+/*    margin: 0px auto;*/
+/*    !*width: 100%;*!*/
+/*    max-width: 1600px;*/
+/*    min-height: 100vh;*/
+/*    padding: 100px 200px 20px 200px;*/
+/*}*/
 
 @media (max-width: 1080px) {
     main {
@@ -121,19 +126,12 @@ main {
 /*----- intro block -----*/
 .intro {
     display: flex;
-    /*-webkit-box-pack: center;*/
     justify-content: center;
-    /*-webkit-box-align: center;*/
     flex-direction: column;
     align-items: flex-start;
-    /*align-items: center;*/
-    /*min-height: 100vh;*/
-    /*height: 100vh;*/
     padding: 0px;
-    /*margin-bottom: 200px;*/
     opacity: 0;
     line-height: 1.3;
-
 }
 
 .intro h1 {
@@ -142,13 +140,15 @@ main {
     font-family: var(--font-fasthand);
     font-size: clamp(22px,5vw,26px);
     font-weight: 400;
+    text-shadow: 4px 4px 4px grey;
 }
 
-.intro-name{
+.intro-name {
     margin: 5px;
     font-size: clamp(40px, 8vw, 80px);
     font-family: var(--font-permanentMarker);
     color: var(--lightest-slate);
+    text-shadow: 4px 4px 4px grey;
 }
 
 .intro-intro {
@@ -161,6 +161,7 @@ main {
 
 .intro-intro em {
     color: var(--white);
+    text-shadow: 4px 4px 4px grey;
 }
 
 .intro-quotation-container {
@@ -171,10 +172,12 @@ main {
     font-family: var(--font-cookie);
     color: var(--lightest-slate);
     font-size: clamp(26px, 5vw, 30px);
+    text-shadow: 3px 3px 3px grey;
 }
 
 .intro-quotation:hover {
     color: var(--white);
+    text-shadow: none;
 }
 
 .intro-quotation cite {
@@ -186,22 +189,24 @@ main {
 
 .intro-quotation cite:hover {
     color: var(--violet);
+    text-shadow: none;
 }
 /*----end intro block-----*/
 
 
 /*----- about block -----*/
 .about {
-    margin-top: 5rem;
+    margin-top: 0rem;
     opacity: 0;
     line-height: 1.3;
 }
 
-.about h1 {
+.contact h1, .about h1 {
     margin-top: 5px;
     color: var(--white);
     font-family: var(--font-alice);
     font-size: clamp(16px, 5vw, 18px);
+    text-shadow: 4px 4px 4px grey;
 }
 
 .about p {
@@ -216,7 +221,6 @@ main {
     width: 100%;
     border: none;
     text-align: left;
-    /*outline: none;*/
     font-size: 15px;
     border-radius: 10px;
     box-shadow: 8px 8px 8px rgba(77, 74, 74, 0.5);
@@ -248,10 +252,10 @@ main {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: var(--dark-slate);
     border-radius: 10px;
     box-shadow: 8px 8px 8px rgba(77, 74, 74, 0.5);
     color: white;
+    background: linear-gradient(141deg, var(--dark-slate) 0%, #5166a1 51%, #36456c 75%); /* gradient */
 }
 
 .about-collapsible-content ul {
@@ -263,10 +267,7 @@ main {
 
 .about-collapsible-content ul li {
     margin-left: 20px;
-    /*font-family: var(--font-cookie);*/
-    /*color: var(--lightest-slate);*/
     font-size: clamp(22px, 5vw, 24px);
-    /*font-size: clamp(40px, 8vw, 80px);*/
     font-family: var(--font-permanentMarker);
 }
 
@@ -275,10 +276,8 @@ main {
 }
 
 .about-collapsible-content ul li::marker {
-    /*color: var(--green);*/
     color: var(--blue);
 }
-
 /*----end about block-----*/
 
 
@@ -354,7 +353,6 @@ main {
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--lightest-navy);
-
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -480,7 +478,6 @@ main {
 .github-link {
     display: flex;
     align-items: center;
-
 }
 
 .github-link img {
@@ -493,12 +490,12 @@ main {
 .github-link img:hover {
     box-shadow: 2px 2px 2px white;
     transform: scale(1.1);
-
 }
-/*----gitHubLink block-----*/
+/*----end gitHubLink block-----*/
 
-/*----end overlay block-----*/
-#overlay1, #overlay2, #overlay3, #overlay4 {
+
+/*----overlay block-----*/
+#overlay1, #overlay2, #overlay3, #overlay4, #overlay5 {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -512,7 +509,7 @@ main {
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#pic1, #pic2, #pic3, #pic4 {
+#pic1, #pic2, #pic3, #pic4, #pic5 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -551,14 +548,12 @@ main {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-
 }
 
 /* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -589,7 +584,7 @@ main {
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot1, .dot2, .dot3, .dot4, .dot5 {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -598,7 +593,6 @@ main {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-
 }
 
 .active, .dot:hover {
@@ -623,23 +617,20 @@ main {
     font-size: 50px;
     font-weight: bold;
 }
+
 .close img {
     box-shadow: 5px 5px 5px black;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-
-    /*box-shadow: 2px 2px 2px white;*/
-    /*transform: scale(1.1);*/
-    /*background-color: white;*/
-
 }
+
 .close img:hover {
     box-shadow: 2px 2px 2px white;
     transform: scale(1.1);
     background-color: white;
-
 }
+
 .close:hover,
 .close:focus {
     color: var(--pink);
@@ -661,10 +652,7 @@ main {
         transform: rotate(10deg);
     }
 }
-/*----end slidebar block-----*/
 
-
-/*----- slidebar block -----*/
 .link {
     border-radius: 10px;
     color: white;
@@ -700,3 +688,265 @@ main {
     font-family: var(--font-alice);
 }
 /*----end prj-description block-----*/
+
+
+/*----- button-link block ------*/
+.button-link a {
+    margin: 0;
+}
+
+.button-link a:after {
+    height: 0;
+}
+
+.button-link a:hover:after {
+    height: 0;
+}
+/*----end button-link block-----*/
+
+
+/*----- parallax block ------*/
+/* NOT ACTIVATED!*/
+.parallax {
+    background-image: url('img/back2.jpg');
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: 100vh;
+}
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+/*@media only screen and (max-device-width: 1366px) {*/
+/*    .parallax {*/
+/*        background-attachment: scroll;*/
+/*    }*/
+/*}*/
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 8px grey;
+    text-shadow: 5px 5px 5px white;
+}
+
+@media (max-width: 450px) {
+    .caption span.border {
+        font-size: 15px;
+    }
+}
+/*----end parallax block-----*/
+
+
+/*----- footer block ------*/
+/*footer {*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*    background-color: var(--navy);*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    font-family: var(--font-alice);*/
+/*    font-size: clamp(16px, 5vw, 18px);*/
+/*    !*color: var(--blue);*!*/
+/*}*/
+
+
+footer {
+}
+
+.right-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: var(--navy);
+    font-family: var(--font-alice);
+    padding: 20px;
+    border-color: white;
+    margin-bottom: 20px;
+}
+
+.left-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--navy);
+    font-family: var(--font-alice);
+    padding: 20px;
+    border-color: white;
+    margin-bottom: 20px;
+}
+
+.text-right {
+    /*writing-mode: horizontal-tb;*/
+    writing-mode: vertical-rl;
+    /*transform: rotate(0deg);*/
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: var(--blue);
+}
+
+.text-left {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: var(--blue);
+}
+.left-footer a, .right-footer a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.left-footer a:hover, .right-footer a:hover {
+    color: var(--violet);
+    font-size: clamp(16px, 5vw, 17px);
+}
+
+.left-footer::after, .right-footer::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: var(--light-slate);
+}
+.left-footer::before, .right-footer::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: var(--light-slate);
+}
+/*----end footer block-----*/
+
+
+/*----- navbar block -----*/
+#mySidenav {
+    position: fixed;
+    z-index: 5;
+}
+
+#mySidenav a {
+    position: fixed;
+    top: -38px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    /*transform: rotate(90deg);*/
+    box-shadow: 5px 5px 5px grey;
+}
+
+#mySidenav a:hover {
+    top: -5px;
+}
+
+#introBar {
+    top: 20px;
+    background-color: var(--dark-slate);
+    right: 340px;
+
+}
+
+#aboutBar {
+    top: 80px;
+    background-color: var(--lightest-navy);
+    right: 230px;
+
+}
+
+#projectsBar {
+    top: 140px;
+    background-color: var(--green-tint);
+    right: 120px;
+}
+
+#contactBar {
+    top: 200px;
+    background-color: #212d46;
+    right: 10px;
+}
+/*----end navbar block-----*/
+
+
+/*----contact-info block-----*/
+#contact {
+    opacity: 0;
+    /*display: none;*/
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-info a:hover {
+    color: var(--violet);
+}
+/*----end contact-info block-----*/
+
+
+/*---- svg-img block -----*/
+.svg-img {
+    color: var(--blue);
+    text-align: center;
+    bottom: 0;
+}
+
+.svg-text {
+    color: var(--blue);
+    text-align: center;
+    bottom: 0;
+    font-family: var(--font-cookie);
+    font-size: clamp(22px,5vw,26px);
+}
+
+.svg-text:hover {
+    text-shadow: 5px 5px 5px white;
+}
+
+.svg-img a {
+    text-decoration-line: none;
+    color: var(--blue);
+}
+.svg-img a:hover {
+    box-shadow: 2px 2px 2px 2px white;
+    font-size: 30px;
+    border-radius: 50%;
+}
+/*----end svg-img block-----*/
+
+ /*Turn off features for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1080px) {
+    footer {
+        opacity: 0;
+    }
+    #mySidenav a {
+        opacity: 0;
+    }
+}
