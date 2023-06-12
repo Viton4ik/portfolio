@@ -468,12 +468,13 @@ main {
 
 
 /*----overlay block-----*/
-#overlay1, #overlay2, #overlay3, #overlay4, #overlay5 {
+#overlay0, #overlay1, #overlay2, #overlay3, #overlay4, #overlay5 {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0;
+    left: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -482,7 +483,7 @@ main {
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#pic1, #pic2, #pic3, #pic4, #pic5 {
+#pic0, #pic1, #pic2, #pic3, #pic4, #pic5 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -503,7 +504,7 @@ main {
 }
 
 /* Hide the images by default */
-.mySlides1, .mySlides2 {
+.mySlides0, .mySlides1, .mySlides2 {
     display: none;
 }
 
@@ -557,7 +558,7 @@ main {
 }
 
 /* The dots/bullets/indicators */
-.dot1, .dot2, .dot3, .dot4, .dot5 {
+.dot0, .dot1, .dot2, .dot3, .dot4, .dot5 {
     cursor: pointer;
     height: 15px;
     width: 15px;
