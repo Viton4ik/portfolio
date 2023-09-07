@@ -483,13 +483,13 @@ main {
     cursor: pointer; /* Add a pointer on hover */
 }
 
-#pic0, #pic1, #pic2, #pic3, #pic4, #pic5, #pic6, #pic7 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}
+/*#pic0, #pic1, #pic2, #pic3, #pic4, #pic5, #pic6, #pic7 {*/
+/*    position: fixed;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%,-50%);*/
+/*    -ms-transform: translate(-50%,-50%);*/
+/*}*/
 /*----end overlay block-----*/
 
 
